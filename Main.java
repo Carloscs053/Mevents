@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -6,7 +7,7 @@ public class Main {
 
         final String userAdmin = "admin", passwdAdmin = "1234";
         String user, passwd, option1;
-        int platea = 200, butaca = 200, anfiteatro = 200, option2;
+        int platea = 200, butaca = 200, anfiteatro = 200, option2, opEvent;
         float totalPrice;
 
 
@@ -30,10 +31,34 @@ public class Main {
                 ╚════════════════════════════════════════════╝""");
         System.out.print("selecciona una opción: ");
         option1 =  s.nextLine();
-
+        option1 = option1.toLowerCase();
+/*NOS HEMOS QUEDADO AQUI 21/10/2024*/
         switch (option1){
             case "a":
-                System.out.println("hola a");
+                System.out.println("""
+               
+                ╔═══════════════════════════════════════════╗
+                ║        ********   EVENTO   ********       ║
+                ╠═══════════════════════════════════════════╣
+                ║  1. Las Criadas.                          ║
+                ║  2. II Concierto de Otoño.                ║
+                ║  3. Concierto de Jazz.                    ║
+                ╚═══════════════════════════════════════════╝""");
+                System.out.print("Introduce un evento: ");
+                opEvent = Integer.parseInt(s.nextLine());
+                switch(opEvent){
+                    case 1:
+                        System.out.println("hola1");
+                        break;
+                    case 2:
+                        System.out.println("hola2");
+                        break;
+                    case 3:
+                        System.out.println("hola3");
+                        break;
+                    default:
+                        System.out.println("opción no valida");
+                }
                 break;
             case "b":
                 System.out.println("hola b");
@@ -41,10 +66,10 @@ public class Main {
             case "c":
                 System.out.println("""
                     
-                    ██ ███    ██ ██  ██████ ██  ██████      ███████ ███████ ███████ ██  ██████  ███    ██ 
-                    ██ ████   ██ ██ ██      ██ ██    ██     ██      ██      ██      ██ ██    ██ ████   ██ 
-                    ██ ██ ██  ██ ██ ██      ██ ██    ██     ███████ █████   ███████ ██ ██    ██ ██ ██  ██ 
-                    ██ ██  ██ ██ ██ ██      ██ ██    ██          ██ ██           ██ ██ ██    ██ ██  ██ ██ 
+                    ██ ███    ██ ██  ██████ ██  ██████      ███████ ███████ ███████ ██  ██████  ███    ██
+                    ██ ████   ██ ██ ██      ██ ██    ██     ██      ██      ██      ██ ██    ██ ████   ██
+                    ██ ██ ██  ██ ██ ██      ██ ██    ██     ███████ █████   ███████ ██ ██    ██ ██ ██  ██
+                    ██ ██  ██ ██ ██ ██      ██ ██    ██          ██ ██           ██ ██ ██    ██ ██  ██ ██
                     ██ ██   ████ ██  ██████ ██  ██████      ███████ ███████ ███████ ██  ██████  ██   ████
                     """);
                 System.out.print("Introduce Usuario: ");
