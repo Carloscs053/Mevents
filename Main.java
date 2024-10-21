@@ -32,7 +32,7 @@ public class Main {
         System.out.print("selecciona una opción: ");
         option1 =  s.nextLine();
         option1 = option1.toLowerCase();
-/*NOS HEMOS QUEDADO AQUI 21/10/2024*/
+/*NOS HEMOS QUEDADO AQUI 21/10/*/
         switch (option1){
             case "a":
                 System.out.println("""
