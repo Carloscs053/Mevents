@@ -163,7 +163,9 @@ public class Main {
                 default:
                     System.out.println("El valor introducido no es correcto es incorrecto.");
             }
-        } while (option2 == 3); /*Este while hace referencia al primer do, en el que está metido el primer menú
+        } while (option2 != 3);/*"E:"Se estaba repitiendo ya que estaba haciendo la lógica de se repita mientras opción
+         sera igual a 3 ahora al ser distinto de 3 se sale :).
+        "C:"Este while hace referencia al primer do, en el que está metido el primer menú
         no funciona, repite el bucle una y otra vez pero hay que investigar qué condición es la que rompe todo el
         bucle
         */
