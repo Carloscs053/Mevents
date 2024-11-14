@@ -21,3 +21,7 @@ Para ello, hemos puesto a disposición del Auditorio y sus espectadores nuestra 
 
 
 # DESCARGA
+
+
+
+![image](https://github.com/user-attachments/assets/f74224e8-05d1-48ef-af41-9f101ee0e99f)
