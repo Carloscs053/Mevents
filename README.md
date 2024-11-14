@@ -9,12 +9,16 @@ Práctica del tema 2 realizada por Carlos Cañada Sánchez y Eduardo Cruz Muñoz
 - DESCARGA
 - MANUAL DE USUARIO
     - MENÚ PRINCIPAL
-      - VENDER ENTRADAS PARA UN EVENTO
+      - COMPRAR ENTRADAS PARA UN EVENTO
         - SELECCIÓN DEL EVENTO
         - FACTURA
         - TICKETS
     - CONSULTAR EL ESTADO DE UN EVENTO
     - MENÚ DE ADMINISTRADOR
+        - CONSULTAR LOS INGRESOS TOTALES POR EVENTO
+        - CONSULTAR LAS MONEDAS RESTANTES PARA EL CAMBIO
+        - VOVLER AL MENÚ PRINCIPAL
+        - APAGAR EL SOFTWARE
 - COLABORADORES
 
 
@@ -30,7 +34,7 @@ Los eventos en cuestión son los siguientes:
 Para ello, hemos puesto a disposición del Auditorio y sus espectadores nuestra aplicación. A continuación, indicaremos los pasos a seguir para su uso.
 
 
-# REQUISITOS MÍNIMOS
+# REQUISITOS MÍNIMOS 💻
 Para poder descargar y utilizar el programa, es necesario tener instalado el siguiente programa:
 - Java Runtime Envrioment 23
 
@@ -77,47 +81,50 @@ En las imágenes podemos ver la ruta del archivo de forma gráfica. Mevents.bat 
 
 # MANUAL DE USUARIO 📖
  - MENÚ PRINCIPAL
+   
    En el menú principal tenemos 3 opciones:
-     a. Vender entradas para un evento.
+     a. Comprar entradas para un evento.
      b. Consultar el estado de un evento.
      c. Menú de Administrador
 
-   ![image](https://github.com/user-attachments/assets/c8fcfb76-ef82-4116-b7de-473ac4d7ee96)
+    ![image](https://github.com/user-attachments/assets/7b8beaef-f32e-4b3e-a1d2-1751ee149064)
 
-   - COMPRAR ENTRADAS PARA UN EVENTO:
+   - COMPRAR ENTRADAS PARA UN EVENTO
+     
      Dentro del primer apartado, accedemos al selector del evento que desee acudir, en el que tenemos los tres eventos mencionados anteriormente, o una cuarta opción para volver al menú principal, función que se repite a lo largo del programa. Dentro de cada apartado podremos ver información del evento (fecha del evento, precio de cada asiento (platea, butaca y anfiteatro) y el descuento por la compra anticipada) y podremos elegir entre dos opciones: comprar y volver al menú principal.
      
      ![image](https://github.com/user-attachments/assets/86206ea4-ec8c-4dde-826a-920ecf4c84f8)
   
-     ![image](https://github.com/user-attachments/assets/48a693fe-e64a-487e-a19f-69f44a6329a9)
+     ![image](https://github.com/user-attachments/assets/d66e7f5d-9a24-4ec9-8e7f-cf5d8778e663)
   
-     ![image](https://github.com/user-attachments/assets/dcdb5043-5d5e-4c24-a6a3-31060e8cc487)
+     ![image](https://github.com/user-attachments/assets/6f9c26ac-a04c-42c7-b6b3-eb3188e0c144)
   
-     ![image](https://github.com/user-attachments/assets/3126b5fa-b59a-47f8-84e0-3184f87bb858)
+     ![image](https://github.com/user-attachments/assets/20beff40-44d9-476f-a185-171bef64c605)
   
      A continuación, voy a usar el evento de "Las Criadas" como ejemplo para el proceso de compra.
   
-       - SELECCIÓN DEL EVENTO:
+       - SELECCIÓN DEL EVENTO
         Primero, nos pregunta la fecha (indicando el formato en el que debe ser introducido), y en caso de no querer introducir la fecha, con poner "no" automáticamente tomará la fecha actual del equipo. La finalidad de esta función es para saber si se dispone del descuento por compra anticipada (disponible si se compra con 7 días o más).
      
        ![image](https://github.com/user-attachments/assets/ce3e535b-72e1-4884-b833-b1dcba04439d)
   
        Los siguiente que nos preguntará es por el tipo de asiento que desea, en mi caso, voy a usar de ejemplo los asientos en platea.
   
-       ![image](https://github.com/user-attachments/assets/2c95b6c6-495a-4889-b766-45fe0ff468d0)
+     ![image](https://github.com/user-attachments/assets/e70aaab4-5555-4c38-938e-72405797a1f5)   
   
        Introducimos la cantidad de asientos que deseamos
   
        ![image](https://github.com/user-attachments/assets/6c8e449b-af60-407b-baa6-7cc723700d4a)
   
-        - FACTURA: 
+        - FACTURA
+     
        Una vez seleccionados los asientos, el programa nos generará una factura con información de nuestra compra (Número de entradas seleccionadas, precio unitario por entrada, IVA de las entradas, descuento (como vemos en las imágenes, nos indica el porcentaje a aplicar si está disponible, de lo contrario, nos sale no disponible), y el precio total a pagar) y nos pregunta con qué cantidad de dinero vamos a pagar, ya que solo se permite pagar al contado.
   
-       ![image](https://github.com/user-attachments/assets/908d56fd-9497-4b19-85b1-5f7994326661)
+     ![image](https://github.com/user-attachments/assets/b2574823-8f9f-49d0-b79f-ff9978b9eb95)
   
        Aquí podemos ver un ejemplo en caso de que el descuento por compra anticipada no esté disponible y no lo aplica al precio final
   
-       ![image](https://github.com/user-attachments/assets/e4f86fa5-65f6-418f-ae34-6dd60f7903cf)
+     ![image](https://github.com/user-attachments/assets/92b9472c-23df-47f8-95f2-1ee5bc72ee41)
   
   
        Según la cantidad introducida nos indicará una cosa u otra. En la siguiente imagen podemos ver lo que ocurre si se introduce una cantidad insuficiente y nos vuelve a preguntar con cuánto vamos a pagar, ya que ha rechazado el pago.
@@ -133,6 +140,7 @@ En las imágenes podemos ver la ruta del archivo de forma gráfica. Mevents.bat 
        ![image](https://github.com/user-attachments/assets/bee9285b-df46-43c3-bb4e-e6534178acb7)
 
        - TICKETS
+         
          Una vez pagado, se generarán los tickets que se han adquirido con los siguientes datos:
            - El número de ticket y el total
            - Nombre del evento
@@ -145,10 +153,14 @@ En las imágenes podemos ver la ruta del archivo de forma gráfica. Mevents.bat 
         
          Una vez mostrados todos los tickets, te devolverá al menú principal.
 
-       ![image](https://github.com/user-attachments/assets/01fa6829-16b1-415b-a536-8751aebc717c)
+     ![image](https://github.com/user-attachments/assets/8e3256b5-a7bd-4365-b4ec-4d99f4967607)
+
+     ![image](https://github.com/user-attachments/assets/10512ced-02b6-46a7-b910-c76067da1eef)
+
 
 
     - CONSULTAR EL ESTADO DE UN EVENTO
+      
       Cuando nos metemos en este apartado, primero nos pregunta la fecha en la que lo estamos consultando para saber cuántos días quedan para el evento y así saber si disponemos de descuento para este o no. Usaré una fecha fija, que es 14/11/2024, para simular el estado de dos eventos y ver cómo actúa según dos eventos distintos. Primero, nos pregunta qué evento estamos interesados en conocer su estado, usaremos tanto "Las Criadas" como "II Concierto de Otoño".
 
       ![image](https://github.com/user-attachments/assets/7a7a8038-fc77-44de-b732-8956213af6dd)
@@ -170,26 +182,34 @@ En las imágenes podemos ver la ruta del archivo de forma gráfica. Mevents.bat 
 
 
    - MENÚ DE ADMINISTRADOR
+     
      Para acceder al menú de administrador, necesitaremos introducir las credenciales. En caso de no meter correctamente las credenciales, nos devolverá directamente al menú principal enviándonos un mensaje de error antes.
 
-     ![image](https://github.com/user-attachments/assets/a8f830b1-8174-4e5d-8648-49c2bfe3fa19)
+     ![image](https://github.com/user-attachments/assets/ddef58b9-8d43-4d9f-a75b-c88e30922872)
 
      Para poder hacer una demostración al usuario, se indicará las credenciales en caso de querer comprobarlo en su propio terminal.
-     USER: Carlos
-     PASSWORD: Venao
+     
+      - USER: "Carlos"
+      - PASSWORD: "venao"
+     
+    IMPORTANTE RESPETAR MAYÚSCULAS Y MINÚSCULAS
+
+     ![image](https://github.com/user-attachments/assets/2ccad4ef-9b94-45c6-8b31-e97a557fd52b)
+
 
      Una vez dentro del menú de administrador, tendremos 4 opciones. Después de las dos primeras opciones, nos devuelve al menú de administrador, la opción 3 nos devuelve al menú principal y la opción 4 apagaría el programa:
+   
      - Consultar los ingresos totales por evento
 
-       ![image](https://github.com/user-attachments/assets/7d5ede70-04f3-4ec5-a339-9010e6eac3c2)
+       ![image](https://github.com/user-attachments/assets/1ac6a53d-c778-4bb2-8fb2-d17e5fdf9de2)
 
      - Consultar las monedas restantes para el cambio
     
-       ![image](https://github.com/user-attachments/assets/cfcac77a-3a90-48f9-98d3-12c6bba9ac0d)
+     ![image](https://github.com/user-attachments/assets/3ffd71b2-3582-4173-ae1a-569e92b4b74c)
     
      - Volver al menú principal
 
-       ![image](https://github.com/user-attachments/assets/232949a2-64bd-4d2b-8edd-5c9da865b9ae)
+     ![image](https://github.com/user-attachments/assets/e2db0f47-e575-4ce9-9c35-1184d99aa84a)
 
      - Apagar el software
     
@@ -201,5 +221,6 @@ En las imágenes podemos ver la ruta del archivo de forma gráfica. Mevents.bat 
 
 
 - COLABORADORES
+  
     - Carlos Cañada Sánchez / Enlace GitHub: https://github.com/Carloscs053
     - Eduardo Cruz Muñoz / Enlace GitHub: https://github.com/EduardoCruzmunioz
